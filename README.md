@@ -1,5 +1,10 @@
 # `ryuk_s_challenge`
 
+This is the game about the GodLike serie.
+It starts with a Ryuk's Challenge.
+Players can collaborate to advance through the episode in search of being the challenger to Ryuk's.
+It uses a mix concept from 2D style game play, with story telling, puzzle, multiplayer cooperation and more.
+
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
 For more information, go to https://aurelia.io/docs/cli/webpack
