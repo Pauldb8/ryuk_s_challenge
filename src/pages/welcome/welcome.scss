@@ -1,0 +1,37 @@
+@import 'colors.scss';
+
+#welcome {
+  align-items: center;
+  background-image: url('/static/assets/menu_background.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: $ryuk_white;
+  
+  h1 {
+    font-family: "Minecraft";
+    font-size: 5.6em;
+    text-align: center;
+    text-shadow: 5px 5px 5px $ryuk_black;
+  }
+  
+  h2 {
+    font-family: "Minecraft";
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 5px 5px 5px $ryuk_black;
+  }
+
+  input.username {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $ryuk_white;
+    color: $ryuk_white;
+    font-family: "Minecraft";
+    font-size: 2em;
+    outline: none;
+    margin-bottom: 16px;
+    text-shadow: 5px 5px 5px $ryuk_black;
+  }
+}

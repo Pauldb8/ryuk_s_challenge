@@ -1,0 +1,31 @@
+@import 'colors.scss';
+
+body {
+  /*background: linear-gradient(to bottom, #00f260, #0575e6);*/
+  height: 100%;
+  margin: 0;
+}
+html, #app {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/static/fonts/Minecraft.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+/**
+ * Buttons 
+ */
+button { 
+  background: $ryuk_green_light;
+  border: 2px solid $ryuk_green;
+  border-radius: 8px;
+  color: $ryuk_white;
+  font-size: 2em;
+  padding: 8px 16px;
+}
+
+div.spacer {
+  flex-grow: 1;
+}
