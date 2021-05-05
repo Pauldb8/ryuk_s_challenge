@@ -1,15 +1,17 @@
 #episode_first {
   align-items: center;
-  background-image: url('/static/assets/episode_first_bg.png'); //not bad
+  background: black;
   display: flex;
   height: 100%;
   flex-direction: column;
   
   #map {
-    align-self: flex-start;
+    
   }
 
   div.instructions {
+    position: relative;
+    bottom: 100px;
     font-family: "Minecraft";
     color: var(--ryuk_white);
     justify-self: flex-end;
