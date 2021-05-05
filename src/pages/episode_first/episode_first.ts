@@ -1,5 +1,5 @@
 import { isBuffer } from 'node:util';
-import PIXI from 'pixi.js/dist/pixi'
+import * as PIXI from 'pixi.js'
 
 export class EpisodeFirst {
   private map;
@@ -7,21 +7,20 @@ export class EpisodeFirst {
   private episode_number;
   private stage;
 
+  // Appelé en premier
   constructor() {
-    this.app = new PIXI.Application({width: 512, height: 512, backgroundColor: 0x000000 });
+    this.app = new PIXI.Application({backgroundColor: 0x000000 });//fait crtl molette sur le frontend
+    this.app.renderer.view.style.position = "absolute";
+    this.app.renderer.view.style.display = "block";
+    this.app.renderer.autoResize = true;
+    this.app.renderer.resize(window.innerWidth, window.innerHeight);
     this.stage = this.app.stage;
-    this.loadSprites();
   }
 
-  /**
-   * Getting the episode number from the url
-   */
-  activate(params) {
-    this.episode_number = params.number; // Episode 1, 2 ..
-  }
-
+  // appelé en troisième
   bind() {
     this.initialize();
+    this.loadSprites();
   }
   
   initialize() {
@@ -34,18 +33,25 @@ export class EpisodeFirst {
     PIXI.utils.sayHello(type);
   }
 
+  /**
+   * Load multiple images as Sprites then calls the setup()
+   */
   loadSprites() {
-
-    PIXI.loader// je sais pas. On verra demain
-    //je vais me reposer :). Bon taf cependant oui, bonne soirée ;)
-      .add("/static/assets/cobrauclown.png")
-      .load(this.setup)
-    //let sprite = new PIXI.Sprite(texture);
+    this.app.loader
+      .add("/assets/cobrau_clown.png")
+      .load(this.setup);
   }
 
+  /**
+   * Sets up the different Sprites (texture from an image)
+   * and adds it to the stage
+   */
   setup() {
-    let sprite = new PIXI.Sprite(
-      PIXI.loader.resources["images/anyImage.png"].texture
+    let that = this;
+    let tete_de_clown = new PIXI.Sprite(
+      that.app.resources["/static/assets/cobrau_clown.png"].texture
     );
+    
+    this.stage.addChild(tete_de_clown); //Let's see 
   }
 }
