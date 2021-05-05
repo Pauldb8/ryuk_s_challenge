@@ -8,6 +8,6 @@ export class Welcome {
   } 
   
   start() {
-    this.router.navigateToRoute('episode', { number: 1 })
+    this.router.navigateToRoute('episode_first')
   }
 }

@@ -14,10 +14,10 @@ export class App {
         title: 'Welcome'
       },
       {
-        route: ['episode/:number'],
-        name: "episode",
-        moduleId: PLATFORM.moduleName('./pages/episode/episode'),
-        title: 'Episodes'
+        route: ['episode/first', 'episode/1'],
+        name: "episode_first",
+        moduleId: PLATFORM.moduleName('./pages/episode_first/episode_first'),
+        title: 'Episode 1st'
       }
     ]);
 

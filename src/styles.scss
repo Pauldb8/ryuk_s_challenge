@@ -18,10 +18,10 @@ html, #app {
  * Buttons 
  */
 button { 
-  background: $ryuk_green_light;
-  border: 2px solid $ryuk_green;
+  background: var(--ryuk_green);
+  border: 2px solid var(--ryuk_green_light);
   border-radius: 8px;
-  color: $ryuk_white;
+  color: var(--ryuk_white);
   font-size: 2em;
   padding: 8px 16px;
 }
